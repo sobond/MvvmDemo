@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MvvmDemo.View
+namespace MvvmDemo.Views
 {
     /// <summary>
     /// Interaction logic for StudentView.xaml
@@ -24,7 +24,7 @@ namespace MvvmDemo.View
         public StudentView()
         {
             InitializeComponent();
-            this.DataContext = new StudentViewModel();
+            //this.DataContext = new StudentViewModel();
         }
     }
 }

@@ -56,9 +56,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModel\StudentViewModel.cs" />
-    <Compile Include="View\StudentView.xaml.cs">
+    <Compile Include="Views\StudentView.xaml.cs">
       <DependentUpon>StudentView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VML\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,7 +72,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\StudentView.xaml">
+    <Page Include="Views\StudentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
