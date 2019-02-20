@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvvmDemo.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,14 @@ namespace MvvmDemo
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            StudentViewModel studentViewModelObject = new StudentViewModel();
+            studentViewModelObject.LoadStudents();
+
+            StudentViewControl.DataContext = studentViewModelObject;
         }
     }
 }
