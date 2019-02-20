@@ -11,17 +11,19 @@ namespace MvvmDemo.ViewModel
     class StudentViewModel
     {
 
+        public ObservableCollection<Student> Students
+        {
+            get;
+            set;
+        }
+
         public StudentViewModel()
         {
             LoadStudents();
 
         }
 
-        public ObservableCollection <Student> Students
-        {
-            get;
-            set;
-        }
+        
 
         public void LoadStudents()
         {
