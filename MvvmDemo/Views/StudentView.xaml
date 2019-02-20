@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MvvmDemo.Views"
              xmlns:viewModel ="clr-namespace:MvvmDemo.ViewModel"
+             xmlns:data = "clr-namespace:MvvmDemo.Model" 
              xmlns:vml = "clr-namespace:MvvmDemo.VML"
 vml:ViewModelLocator.AutoHookedUpViewModel = "True" 
    mc:Ignorable = "d" d:DesignHeight = "300" d:DesignWidth = "300">
@@ -14,7 +15,7 @@ vml:ViewModelLocator.AutoHookedUpViewModel = "True"
    </UserControl.DataContext>-->
 
     <UserControl.Resources>
-        <DataTemplate x:Key = "studentsTemplate">
+        <DataTemplate DataType = "{x:Type data:Student}">
 
             <StackPanel Orientation = "Horizontal">
                 <TextBox Text = "{Binding Path = FirstName, Mode = TwoWay}" 
@@ -31,7 +32,7 @@ vml:ViewModelLocator.AutoHookedUpViewModel = "True"
     </UserControl.Resources>
 
     <Grid>
-        <ListBox ItemsSource = "{Binding Students}" ItemTemplate = "{StaticResource studentsTemplate}"/>
+        <ListBox ItemsSource = "{Binding Students}"/>
     </Grid>
 
 </UserControl>
