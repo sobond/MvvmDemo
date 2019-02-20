@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvvmDemo.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace MvvmDemo.View
         public StudentView()
         {
             InitializeComponent();
+            this.DataContext = new StudentViewModel();
         }
     }
 }
